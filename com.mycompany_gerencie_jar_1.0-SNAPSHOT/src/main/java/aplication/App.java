@@ -50,6 +50,7 @@ public class App {
             isLogado = consulta.logarTotem(user, senha, idTotemVar);
 
         } while (!isLogado);
+        banc.criarBanco();
 
         lc.pegarDados();
         new Timer().scheduleAtFixedRate(new TimerTask() {

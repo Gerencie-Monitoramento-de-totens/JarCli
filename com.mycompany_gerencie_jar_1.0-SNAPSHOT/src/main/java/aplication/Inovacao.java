@@ -34,7 +34,7 @@ public class Inovacao {
                 if(so.equals("Windows")){
                     pro = run.exec(String.join("& ", cmds));
                 }else{
-                    pro = run.exec("shutdown -h -t " + 1); 
+                    pro = run.exec("sudo shutdown -r now" + 1); 
                 }
                
 

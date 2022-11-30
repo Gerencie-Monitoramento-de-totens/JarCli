@@ -50,7 +50,7 @@ public class App {
             isLogado = consulta.logarTotem(user, senha, idTotemVar);
 
         } while (!isLogado);
-        banc.criarBanco();
+//        banc.criarBanco();
 
         lc.pegarDados();
         new Timer().scheduleAtFixedRate(new TimerTask() {
@@ -67,11 +67,11 @@ public class App {
                 
                 System.out.println();
 
-//                System.out.println("Uso Processador: " + Conversor.formatarBytes(lc.getUsoProcessador().longValue()));
-//                System.out.println("Uso Ram: " + Conversor.formatarBytes(lc.getEmUsoRAM()));
-//                System.out.println("Ram total: " + Conversor.formatarBytes(lc.getMemoriaRAMTotal()));
-//                System.out.println("DisponivelRam: " + Conversor.formatarBytes(lc.getDisponivelRAM()));
-//                System.out.println("Temperatura: " + Double.toString(lc.getTemperatura()));
+                System.out.println("Uso Processador: " + Conversor.formatarBytes(lc.getUsoProcessador().longValue()));
+                System.out.println("Uso Ram: " + Conversor.formatarBytes(lc.getEmUsoRAM()));
+                System.out.println("Ram total: " + Conversor.formatarBytes(lc.getMemoriaRAMTotal()));
+                System.out.println("DisponivelRam: " + Conversor.formatarBytes(lc.getDisponivelRAM()));
+                System.out.println("Temperatura: " + Double.toString(lc.getTemperatura()));
 
                 innovation.desligar(lc.getIdTotem(), lc.getSistemaOperacional());
             }

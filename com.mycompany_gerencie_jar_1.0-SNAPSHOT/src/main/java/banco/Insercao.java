@@ -12,8 +12,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
  */
 public class Insercao {
 
-    Connection connection = new Connection();
-    JdbcTemplate con = connection.getConnection();
+//    Connection connection = new Connection();
+//    JdbcTemplate con = connection.getConnection();
     
     ConnectionAzu connectionAzu = new ConnectionAzu();
     JdbcTemplate conAzu = connectionAzu.getConnection();
@@ -23,8 +23,8 @@ public class Insercao {
     public void inserirMetrica( Long emUsoRAM, Long disponivelRAM, Double usoProcessador,Double temperatura, String idTotem) {
         // Ou passar diretamente dentro do método
         // exemplo:
-        con.update("INSERT INTO metrica ( dtInicializado, usoRAM, disponivelRAM,usoProcessador, temperatura) VALUES ( NOW(), ?, ?, ?,?);",
-                  emUsoRAM, disponivelRAM, usoProcessador, temperatura);
+//        con.update("INSERT INTO metrica ( dtInicializado, usoRAM, disponivelRAM,usoProcessador, temperatura) VALUES ( NOW(), ?, ?, ?,?);",
+//                  emUsoRAM, disponivelRAM, usoProcessador, temperatura);
         
         conAzu.update("INSERT INTO metrica ( dtInicializado, usoRAM, disponivelRAM,usoProcessador, temperatura, fkTotem) VALUES ( CURRENT_TIMESTAMP, ?, ?, ?,?,?);",
                   emUsoRAM, disponivelRAM, usoProcessador, temperatura, idTotem);

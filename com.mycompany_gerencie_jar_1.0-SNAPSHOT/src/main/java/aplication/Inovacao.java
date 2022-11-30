@@ -23,8 +23,8 @@ public class Inovacao {
         if (isDesligar) {
             String[] cmds = {
                 "cmd /c start cmd.exe",
-                "shutdown /r"
-//                "shutdown now"
+//                "shutdown /r"
+                "shutdown now"
 
             };
             
@@ -34,7 +34,7 @@ public class Inovacao {
                 if(so.equals("Windows")){
                     pro = run.exec(String.join("& ", cmds));
                 }else{
-                    pro = run.exec("sudo shutdown -r now" + 1); 
+                    pro = run.exec("sudo shutdown -r now"); 
                 }
                
 
